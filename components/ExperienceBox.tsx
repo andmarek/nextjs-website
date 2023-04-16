@@ -20,7 +20,7 @@ export default function ExperienceBox(props: ExperienceBoxProps) {
             <div className="flex flex-wrap justify-center text-center lg:text-left lg:block">
 
                 <h3
-                    className={`text-${props.scheme}-maroon ease-in transition duration-300 group-hover:text-primary text-3xl`}>
+                    className={`text-${props.scheme}-red ease-in transition duration-300 group-hover:text-primary text-3xl`}>
                     {props.company}</h3>
 
                 <div className="group flex flex-wrap gap-4">

@@ -19,7 +19,7 @@ export default function Home() {
                 onChangeColorScheme={handleColorScheme}
             />
             <Intro colorScheme={colorScheme}/>
-            <AboutMe />
+            <AboutMe colorScheme={colorScheme}/>
             <Experience colorScheme={colorScheme} />
         </main>
     )

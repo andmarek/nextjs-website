@@ -48,6 +48,7 @@ const Navbar = (props: NavBarProps) => {
                     <select className="text-red" onChange={handleChange}>
                         <option value="none">theme</option>
                         <option value="ctp">catppuccin</option>
+                        <option value="nord">nord</option>
                     </select>
                 </div>
             </nav>
