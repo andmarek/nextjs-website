@@ -6,7 +6,11 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
+
     extend: {
+      colors: {
+        "bubble-gum": '#ff77e9'
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
@@ -14,5 +18,10 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require("@catppuccin/tailwindcss")({
+      prefix: 'ctp',
+      defaultFlavour: 'mocha'
+    })
+  ],
 }

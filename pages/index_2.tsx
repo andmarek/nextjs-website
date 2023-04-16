@@ -1,14 +1,26 @@
-import Image from 'next/image'
+import React, {useState} from 'react';
 import { Inter } from 'next/font/google'
-import Navbar from '@/components/Navbar'
 
-const inter = Inter({ subsets: ['latin'] })
+import Navbar from '@/components/Navbar'
+import AboutMe from '@/components/About'
+import Experience from '@/components/Experience'
+import Intro from '@/components/Intro'
 
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-        <p> hi </p>
-        <Navbar/>
-    </main>
-  )
+    const [colorScheme, setColorScheme] = useState("");
+
+    function handleColorScheme(opt: string) {
+        setColorScheme(opt)
+    }
+
+    return (
+        <main className={`bg-${colorScheme}-base `}>
+            <Navbar 
+                onChangeColorScheme={handleColorScheme}
+            />
+            <Intro colorScheme={colorScheme}/>
+            <AboutMe />
+            <Experience colorScheme={colorScheme} />
+        </main>
+    )
 }
